@@ -1,0 +1,193 @@
+::before,
+::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  --fontDefault: "Lato", sans-serif;
+}
+
+.container {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+.hover--1 {
+  margin-bottom: 2rem;
+}
+a[data-hover] {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 10px 30px;
+  color: #272727;
+  font-family: var(--fontDefault);
+  font-size: 45px;
+  border: 3px solid currentColor;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+  border-radius: 5px;
+}
+a[data-hover="hoverme"] {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 10px 30px;
+  color: #272727;
+  font-family: var(--fontDefault);
+  font-size: 45px;
+  border: 3px solid currentColor;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s;
+  border-radius: 5px;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fb4;
+    transform-origin: bottom left;
+    /* transform: rotateX(-180deg); */
+    transform: rotate(-90deg);
+
+    transition: transform 1s;
+  }
+  &:hover::before {
+    transform: rotate(0);
+    background-color: #f4bf30;
+  }
+  &:hover {
+    color: #fff;
+    transition-delay: 0.4s;
+  }
+}
+
+/* BUTTON EFFECT HOVER */
+
+a[data-hover="hovereffect"] {
+  position: relative;
+  transition: all 1s;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #e19704, #c23004);
+    /* transition:  transform 1s; */
+    /* transform: rotateY(90deg); */
+    transform: translateX(-100%);
+    transform-origin: center left;
+    transition: all 1s;
+    z-index: -1;
+  }
+  &:hover::before {
+    /* transform: rotateY(0); */
+    transform: translateX(0);
+    background: linear-gradient(-90deg, #e19704, #c23004);
+    transition-behavior: 2s;
+  }
+  &:hover {
+    color: #fff;
+    transition-delay: 0.3s;
+    box-shadow: 0 0 0 4px #031501 inset;
+  }
+}
+
+a[data-hover="hoverescale"] {
+  letter-spacing: 2px;
+  position: relative;
+  transition: 1s;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #c23004;
+    z-index: -1;
+    transform: rotateX(90deg);
+    transition: 1s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #c23004;
+    z-index: -1;
+    transform: rotateY(90deg);
+    transition: 1s;
+  }
+  &:hover::after {
+    transform: rotateY(0deg);
+  }
+  &:hover::before {
+    transform: rotateX(0deg);
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+/* Hover Button */
+
+a[data-hover="hoverbutton"] {
+  border: 3px solid #e1332dd1;
+  color: #e1332dd8;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  font-weight: 300;
+  transition: all 0.5s;
+  &:hover {
+    font-weight: 900;
+    letter-spacing: 10px;
+    border: 4px solid #e1332dd1;
+  }
+}
+
+/* HOVER EFFECT 2 */
+.hover--2 {
+  display: flex;
+}
+
+a[data-hover="hoverYeah"] {
+  position: relative;
+  border-color: darkblue;
+  overflow: hidden;
+  transition: all 1s;
+  padding: 20px inherit;
+}
+a[data-hover="hoverYeah"]::before {
+  content: "Yeah";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #e31;
+  color: white;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translateY(-100%);
+  transition: all 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a[data-hover="hoverYeah"]:hover::before {
+  transform: translateY(0);
+  z-index: 0;
+}
