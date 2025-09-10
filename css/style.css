@@ -1,0 +1,132 @@
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+}
+
+img {
+  display: block;
+  width: 300px;
+  margin: auto;
+  margin-top: 40px;
+  transform: rotateX(0);
+  transition: transform 1s;
+  transform-origin: top;
+  cursor: pointer;
+  padding: 40px;
+  &:hover {
+    transform: rotateY(90deg);
+    padding-bottom: 4rem;
+    opacity: 0.8;
+  }
+}
+
+.header {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 3rem;
+  margin: 0 auto;
+  padding: 4rem;
+
+  [data-btn] {
+    position: relative;
+    border: 1px solid #000;
+    inline-size: auto;
+    padding: 12px 22px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 1s;
+    color: #272727;
+    font-weight: bold;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      transition: transform 1s;
+      transform: translate3d(-100%,0,0);
+      background: #460ba5;
+    }
+     &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      transition: transform 1s;
+      transform: translateY(-100px) !important;
+      background: #79ea63;
+    }
+    &:hover::before{
+       transform: translate3d(0,0,0);
+       transition: 1s;
+    }
+     &:hover::after{
+       transform: translateY(0);
+       transform-origin: right;
+       background: rgb(192, 9, 9);
+       transition-delay: 1s;
+    }
+    &:hover{
+      color: #fff;
+      z-index: 1;
+    }
+  }
+}
+
+figure{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.container--modal{
+  position: relative;
+  display: block;
+  text-align: center;
+  border: 2px solid #ccc4;
+  border-radius: 4px;
+  padding: 3rem;
+  grid-column: 1/-1;
+  perspective: 200px;
+  margin-top: 2rem;
+   perspective:500px;
+   transition: transform 1s;
+}
+.ativo{
+  display: block !important;
+  transition: all 1s;
+    color: #fff;
+
+
+}
+[data-modal="1"].ativo{
+  background-color: #e51;
+  transition-delay: 2s;
+}
+[data-modal="2"].ativo{
+  background-color: rgb(5, 130, 70);
+  transition-delay: 9s;
+
+}
+[data-modal="3"].ativo{
+  background-color: rgb(7, 66, 144);
+  transition-delay: 6s;
+
+}
+.hidden{
+  display: none;
+}
