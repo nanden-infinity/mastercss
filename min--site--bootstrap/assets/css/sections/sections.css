@@ -1,0 +1,35 @@
+
+.box-buttom {
+  all: unset;
+
+  & button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--orangeColor) !important;
+      color: #000 !important;
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  & img {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: none !important;
+    box-shadow: none !important;
+    filter: invert(10%) !important;
+    &:hover {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 0.75rem crimson);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+
+

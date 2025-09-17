@@ -1,0 +1,201 @@
+.container--wrapper {
+  box-shadow: 0 -44rem 0 4rem transparent;
+  padding: 0;
+  & .wrapper {
+    padding: 2rem;
+    padding-bottom: 0rem;
+    margin-top: 10rem;
+    background: var(--blueColor);
+    height: 650px;
+    & .cards {
+      display: grid;
+      padding: 2rem 0;
+      place-items: center;
+      justify-content: center;
+      margin: 0 auto !important;
+      margin-top: 2rem !important;
+      box-sizing: border-box;
+      transform: translateY(-190px);
+      grid-template-columns: repeat(auto-fill, minmax(190px, 280px));
+      max-height: fit-content;
+      & figure {
+        transition: all 1s;
+
+        background: #fff;
+        padding: 2rem;
+        border-radius: 4px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+        & img {
+          border-radius: 4px 4px 0% 0%;
+          cursor: pointer;
+          overflow: hidden;
+
+          box-shadow: 0 0 0 22px teal inset;
+          transition: all 1s;
+          &:hover {
+            box-shadow: 0 0 0 4px #1a0d0d;
+            transition: 0.2s;
+            transform: scale(1) translate3d(0, -10px, 0);
+          }
+        }
+      }
+    }
+  }
+
+  /* Card-content */
+}
+.box-buttom {
+  all: unset;
+
+  & button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--orangeColor) !important;
+      color: #000 !important;
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  & img {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: none !important;
+    box-shadow: none !important;
+    filter: invert(10%) !important;
+    &:hover {
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 0.75rem crimson);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+/* Section Cards  */
+/* Card container */
+.wrapper--cards {
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 1rem !important;
+  margin: auto;
+  place-items: center;
+}
+.card--default {
+  width: 100%;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  transition: all 0.5s;
+  padding: 0.9rem 1.5rem !important;
+  background: var(--orange--light);
+  cursor: pointer;
+  & .box--image {
+    z-index: 2;
+    --shadow-color: #ccc7;
+    height: 100%;
+    width: 100%;
+    & img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 -12px 22px rgba(0, 0, 0, 0.05),
+        0 -8px 12px rgba(0, 0, 0, 0.2), 0 -20px 0 12px var(--orangeColor);
+      transform: translateY(-60px);
+      transition: all 0.5s;
+    }
+  }
+  /* End Box--imag */
+  .geral {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    background: #000;
+    overflow: hidden;
+    box-sizing: border-box;
+    transform: translateY(-50px);
+    border-top: 1px solid #000;
+    transform-box: fill-box;
+  }
+  .content-text {
+    padding: 0.5rem;
+    /* box-shadow: 0 0 0 12px var(--orange--light); */
+    transform: translateY(-210px);
+    border-radius: 0 0 var(--rounded-8) var(--rounded-8);
+    background: rgba(255, 255, 255, 0.5);
+    transition: 1s all;
+    transform-origin: top;
+    opacity: 0;
+    /* DETALHES */
+    & .info-mal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+      background: #000 !important;
+    }
+
+    & a {
+      display: inline-block;
+      padding: 0.475rem 1.25rem;
+      text-decoration: none;
+      color: var(--greenColor);
+      background: var(--orangeColor);
+      font-family: var(--FontDescription);
+      border-radius: var(--rounded-8);
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    & p {
+      font-family: var(--FontDescription);
+      line-height: 1.2;
+    }
+  }
+
+  &:hover .content-text {
+    opacity: 1;
+    transform: translateY(0);
+    height: auto;
+  }
+  &:hover .info-mal{
+    background: var(--orangeColor) !important;
+    color: #000 !important;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover .box--image img {
+    transform: translateY(-40px);
+  }
+  &:hover {
+    height: 360px;
+  }
+  /* End content container  */
+}
+
+/* ParentElement Effect--hover */
+
+#features {
+  margin-top: 2rem;
+  padding: 0 !important;
+}
+
+/* FAQ SECTION */
+
+.h1-faq {
+  font-family: var(--fontTitle);
+  font-weight: bolder;
+  font-size: 3.3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}

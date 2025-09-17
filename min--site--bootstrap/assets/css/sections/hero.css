@@ -1,0 +1,45 @@
+.container--wrapper {
+  box-shadow: 0 -44rem 0 4rem transparent;
+  padding: 0;
+  & .wrapper {
+    padding: 2rem;
+    padding-bottom: 0rem;
+    margin-top: 10rem;
+    background: var(--blueColor);
+    height: 650px;
+    & .cards {
+      display: grid;
+      padding: 2rem 0;
+      place-items: center;
+      justify-content: center;
+      margin: 0 auto !important;
+      margin-top: 2rem !important;
+      box-sizing: border-box;
+      transform: translateY(-190px);
+      grid-template-columns: repeat(auto-fill, minmax(190px, 280px));
+      max-height: fit-content;
+      & figure {
+        transition: all 1s;
+
+        background: #fff;
+        padding: 2rem;
+        border-radius: 4px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+        & img {
+          border-radius: 4px 4px 0% 0%;
+          cursor: pointer;
+          overflow: hidden;
+
+          box-shadow: 0 0 0 22px teal inset;
+          transition: all 1s;
+          &:hover {
+            box-shadow: 0 0 0 4px #1a0d0d;
+            transition: 0.2s;
+            transform: scale(1) translate3d(0, -10px, 0);
+          }
+        }
+      }
+    }
+  }
+}

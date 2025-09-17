@@ -1,0 +1,60 @@
+/* Head Titles and H1 */
+@layer {
+  h1 {
+    font-family: var(--fontTitle);
+    font-weight: bolder !important;
+    font-size: 4rem !important;
+    color: var(--blackColor);
+    text-align: center !important;
+  }
+}
+h1.title {
+  font-family: var(--fontTitle);
+  font-size: 3.3rem;
+}
+/* Background-Color */
+/* imgaes pokemons  */
+.img-pok{
+  max-width: 120px !important;
+ 
+  width: 100%;
+ 
+}
+.bg-amber {
+  background: var(--orangeColor);
+}
+
+.mt--10 {
+  margin-top: 8rem !important;
+}
+
+.mb--10 {
+  margin-top: 16rem !important;
+}
+
+/* H1 destaque */
+.wrapper--cards {
+  position: relative;
+}
+.h1-about {
+  font-size: 3rem;
+}
+.destaque-h1 {
+  position: absolute;
+  top: -15rem;
+  padding: 4rem 0;
+  z-index: 3;
+  font-family: var(--fontTitle);
+  font-weight: bolder;
+  font-size: 4rem;
+  color: black;
+  margin-block: 4rem;
+  grid-column: 1/-1;
+} /* row --- */
+hr {
+  background: var(--orangeColor);
+  height: 0.2rem;
+  border: none;
+}
+
+/* Icons SVG Style */

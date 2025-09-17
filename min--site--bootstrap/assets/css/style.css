@@ -1,0 +1,36 @@
+@import url(bootstrap.min.css);
+@import url(sections/hero.css);
+@import url(sections/section-grid.css);
+@import url(components.css);
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+:root {
+  --blueColor: #0d6efd;
+  --orangeColor: rgb(241, 150, 3);
+  --tealColor: #30c0ab;
+  --orange--light: rgb(241, 214, 169);
+  --fonts {
+    --fontTitle: "Rubik", sans-serif;
+    --FontDescription: "Plus Jakarta Sans", sans-serif;
+    --FontDefault: "Inter", sans-serif;
+  }
+  --rounded-8: 8px;
+  --textColors {
+    --greenColor: #021913;
+    --blackColor: #2222;
+  }
+}
+
+section#hero .container {
+  margin-top: 2rem;
+  background: rgba(242, 242, 171, 0.083);
+  & h1.titulo {
+    & strong {
+      color: var(--tealColor);
+    }
+  }
+  & .text-description {
+    font-size: 1.2rem;
+    line-height: 0.8;
+  }
+  
+}
