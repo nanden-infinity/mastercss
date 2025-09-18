@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 4rem;
+  width: 410px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.1),
+    0 -12px 20px rgba(255, 255, 255, 0.97);
+}
+input {
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  border: 1px solid rgba(70, 69, 69, 0.1);
+      outline: 1.5px solid transparent;
+  box-sizing: border-box;
+  transition: outline .5s;
+  &:focus-within{
+    outline: 1.5px solid #0475b2;
+      border: 1px solid transparent;
+  }
+}
+
+button {
+  padding: 0.8rem 4rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  width: max-content;
+  text-align: center;
+  align-self: center;
+  background: #033c6e;
+  transition: border-bottom 0.1s;
+  transform: translate3d(0, -4px, 0);
+  transition-delay: 0.4s;
+  transform-origin: bottom;
+  color: #f5f5f5;
+  cursor: pointer;
+  border-bottom: 4px solid #013450;
+  &:hover {
+    background: #013450;
+   border: none;
+    color: #f0ece4;
+    transition: border-bottom 0.1s;
+  }
+}
+
+input.sucess{
+outline-color:  lime !important;
+}
+
+input.error{
+outline-color:  crimson !important;
+}
